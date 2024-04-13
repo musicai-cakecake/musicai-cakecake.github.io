@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" xmlns:audio="http://www.w3.org/1999/xhtml">
 <head>
 <meta charset="utf-8">
 <meta name="generator" content="Hugo 0.16-DEV" />
@@ -11,6 +11,22 @@
 <link rel="stylesheet" href="../css/custom.css">
 <link rel="alternate" href="index.xml" type="application/rss+xml" title="Music AIGC">
 <!-- <link rel="shortcut icon" href="favicon.png" type="image/x-icon" /> -->
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+</style>
+
+<!--<style>-->
+<!--    img {-->
+<!--       width: 50%;-->
+<!--       height: auto;-->
+<!--    }-->
+<!--</style>-->
+
 <title>POP-Diffuseq music generation samples</title>
 </head>
 <body>
@@ -18,23 +34,36 @@
 <div class="container">
 
 	<header role="banner">
-		
-			
-		
-		
-	</header>
 
+	</header>
 
 	<main role="main">
 		<article itemscope itemtype="https://schema.org/BlogPosting">
-            <h1 class="entry-title" itemprop="headline">Pop-Diffuseq generation samples and supplement</h1>
-			
-			<section itemprop="entry-text">
-				
 
-<!-- <h3 id="audio:5235174b1b444bed79f65b35b58276f2">Ha ha</h3> -->
-<h2>1. Piano and chord conditioned melody generation (accompaniment to melody)</h2>
-<p>Generate melody based on a given piano accompaniment. </p>
+<h1 class="entry-title" itemprop="headline">Pop-Diffuseq paper supplement and generated samples</h1>
+<section itemprop="entry-text">
+
+<p style="font-size:20px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the supplement page!
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content generation in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
+    The datasets and all of our unfiltered AI generated raw midi samples are available on Github:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/nahidacake/pop-diffuseq
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models used in these experiments can be downloaded in Google Drive:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=sharing
+</p>
+
+<div class="container">
+    <img src="‎text_to_score.png" alt="text to score" width="50%" height="50%">
+</div>
+<p style="text-align:center;">Fig.1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
+    <br>guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>
+
+<!--<img src="‎text_to_score.png" alt="text to score" width="40%" height="40%">-->
+
+<!--<p style="font-size:18px;"> POP-Diffuseq can create pop music scores guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>-->
+
+<h2>Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate melody based on a given piano track. </p>
 <h3>Data set: Pop909. </h3>
 
 <table><thead>
@@ -46,53 +75,55 @@
 </tr></thead><tbody>
 <tr>
 <td>Sample 1</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/input-1.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/Melody-Diffuseq-sample-1-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/Melody-Diffuseq-sample-1-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/input-1.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/Melody-Diffuseq-sample-1-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-1/Melody-Diffuseq-sample-1-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
 <td>Sample 2</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/input-2.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/Melody-Diffuseq-sample-2-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/Melody-Diffuseq-sample-2-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/input-2.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/Melody-Diffuseq-sample-2-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-2/Melody-Diffuseq-sample-2-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
 <td>Sample 3</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/input-3.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/Melody-Diffuseq-sample-3-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/Melody-Diffuseq-sample-3-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/input-3.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/Melody-Diffuseq-sample-3-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-3/Melody-Diffuseq-sample-3-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
 <td>Sample 4</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/input-4.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/Melody-Diffuseq-sample-4-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/Melody-Diffuseq-sample-4-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/input-4.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/Melody-Diffuseq-sample-4-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-4/Melody-Diffuseq-sample-4-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
 <td>Sample 5</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/input-5.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/Melody-Diffuseq-sample-5-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/Melody-Diffuseq-sample-5-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/input-5.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/Melody-Diffuseq-sample-5-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-5/Melody-Diffuseq-sample-5-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
 <td>Sample 6</td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/input-6.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/Melody-Diffuseq-sample-6-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/Melody-Diffuseq-sample-6-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/input-6.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/Melody-Diffuseq-sample-6-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+<td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-6/Melody-Diffuseq-sample-6-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 <tr>
   <td>Sample 7</td>
-  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/input-7.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/Melody-Diffuseq-sample-7-generation.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/Melody-Diffuseq-sample-7-real.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/input-7.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/Melody-Diffuseq-sample-7-generation.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/melody-generation-samples/sample-7/Melody-Diffuseq-sample-7-real.mp3"/>Your browser does not support the audio element.</audio></td>
 </tr>
 </tbody>
 </table>
 
-<h2>2. Prompts and chord conditioned accompaniment generation (prompts and melody to accompaniment)</h2>
-<p>Generate band accompaniment from specified instruments and tempo prompts. </p>
-<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high quality</h3>
+<h2>Prompts and chord conditioned accompaniment generation samples (prompts and melody to accompaniment)</h2>
+                <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate band accompaniment from specified instruments and tempo prompts.
 
+<!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
+                </p>
+<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high yield</h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -104,37 +135,37 @@
   <tr>
   <td style="text-align: center">Sample 1 &nbsp;</td>
   <td style="text-align: center">Guitar, bass, ensemble, drum, percussive, Tempo-Andante &nbsp;</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/80-popband-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
   <td style="text-align: center">Sample 2 &nbsp;</td>
   <td style="text-align: center">Ethnic, bass, guitar, drum, synth-pad, Tempo-Andante &nbsp;</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/334-popband-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
       <td style="text-align: center">Sample 3 &nbsp;</td>
       <td style="text-align: center">Brass, bass, synth-pad, drum, ensemble, Tempo-Moderato &nbsp;</td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/353-popband-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
   <tr>
       <td style="text-align: center">Sample 4 &nbsp;</td>
       <td style="text-align: center">Strings, bass, guitar, piano, Tempo-Andante &nbsp;</td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/18-popband-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
   <tr>
       <td style="text-align: center">Sample 5 &nbsp;</td>
       <td style="text-align: center">Guitar, bass, piano, drum, organ, Tempo-Allegro &nbsp;</td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/126-popband-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   </tbody>
   </table>
 
-<h3>Data set: LMD &nbsp; Masking strategy: high quality </h3>
+<h3>Data set: LMD &nbsp; Masking strategy: high yield </h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -146,57 +177,318 @@
   <tr>
   <td style="text-align: center">Sample 1 &nbsp;</td>
   <td style="text-align: center">Electric guitar, bass, drum, Tempo-Moderato &nbsp;</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
   <td style="text-align: center">Sample 2 &nbsp;</td>
   <td style="text-align: center">Brass, bass, drum, percussive, Tempo-Andante &nbsp;</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-gen-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/6-lmd-gen-quality.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
       <td style="text-align: center">Sample 3 &nbsp;</td>
       <td style="text-align: center">Acoustic guitar, bass, drum, piano, Tempo-Allegro &nbsp;</td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-melody-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-gen-quality.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-melody-quality.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/16-lmd-gen-quality.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
   <tr>
       <td style="text-align: center">Sample 4 &nbsp;</td>
       <td style="text-align: center">Ensemble, synth pad, percussive, Tempo-Moderato &nbsp;</td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
   </tbody>
   </table>
 
-<h3>Contrast experimen &nbsp; Data set: LMD &nbsp; Masking strategy: high quality </h3>
-
+<h3>Data set: LMD &nbsp; Masking strategy: high originality </h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
-  <th style="text-align: center">Input melody    </th>
+  <th style="text-align: center">Input prompts    </th>
+  <th style="text-align: center">Input melody</th>
+  <th style="text-align: center">AI generation</th>
+  </tr></thead>
+    <tbody>
+  <tr>
+      <td style="text-align: center">Sample 1 &nbsp;</td>
+      <td style="text-align: center">Ensemble, bass, drum, Tempo-Andante &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/14-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/14-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+  <td style="text-align: center">Sample 2 &nbsp;</td>
+  <td style="text-align: center">Acoustic guitar, electric guitar, bass, percussive, Tempo-Andante &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/15-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/15-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+      <td style="text-align: center">Sample 3 &nbsp;</td>
+      <td style="text-align: center">Brass, bass, percussive, Tempo-Allegro &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/35-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/35-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
+ </tr>
+      <tr>
+      <td style="text-align: center">Sample 4 &nbsp;</td>
+      <td style="text-align: center">electric guitar, bass, percussive, Tempo-Allegro &nbsp;</td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/38-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+      <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/38-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
+ </tr>
+    </tbody>
+</table>
+
+<h3>Contrast experiment &nbsp; Data set: LMD &nbsp; Masking strategy: high yield </h3>
+<table><thead>
+  <tr>
+  <th style="text-align: center">Samples    </th>
+  <th style="text-align: center">Input melody</th>
   <th style="text-align: center">POPMAG</th>
-  <th style="text-align: center">Our POP-Diffuseq</th>
+  <th style="text-align: center">Our Pop-Diffuseq</th>
   </tr></thead>
     <tbody>
   <tr>
   <td style="text-align: center">Sample 1 &nbsp;</td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-melody.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
-  <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/0-lmd-gen.mp3" autoplay/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-contrast-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-popmag.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/1-contrast-pop-diffuseq-lmd.mp3"/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+  <td style="text-align: center">Sample 2 &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/2-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/2-popmag.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/2-contrast-pop-diffuseq-lmd.mp3"/>Your browser does not support the audio element.</audio></td>
+  </tr>
+  <tr>
+  <td style="text-align: center">Sample 3 &nbsp;</td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/3-melody.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/3-popmag.mp3"/>Your browser does not support the audio element.</audio></td>
+  <td><audio controls="controls" ><source src="Samples/ContrastExperiment-samples/3-contrast-pop-diffuseq-lmd.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   </tbody>
   </table>
 
+<h2>Dataset and preprocessing</h2>
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;As stated in the paper, We contribute a pop band MIDI dataset MidiPopBand3k and a modified LMD-aligned(LMD) dataset, both of which were used for experiments.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;MidiPopBand3k is a well-chosen collection of 1000 pop MIDI music carefully selected by our musicians. All 1K raw MIDI files in the dataset are obtained from free Internet sources.
+    We then split the music into shorter pieces, resulting in 3K MIDI files. Although the length of music in small clips is shortened, it is sufficient for various music AI tasks.
+    The music collection is carefully selected based on a series of criteria:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;(1) Pop band music. The music must include a vocal melody track and at least three different instrumental accompaniments. In other words, music has at least four parts.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;(2) The entire music must be long enough to be divided into three segments, each of at least 500 notes.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;(3) The category of musical instrument are distinct enough to be identified in all tracks.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;(4) Musical styles range from classic pop, rock, jazz and country etc. Try to avoid rap and electronic music as they are not easy to study together.
+    Oriental music (including Chinese pop, J-pop, K-pop and a small amount of Indian pop) accounts for a larger proportion.
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;Our musicians manually annotated the instrument category on each tracks and proofread the tempo of all the music. MidiPopBand3k is suitable for various AI tasks, including music generation, understanding and recommendation.
+    We make MidiPopBand3k freely available to help research in the field of music artificial intelligence. The design of instrument categories and tempo will be introduced in subsequent chapters.
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;LMD-aligned is a POP subset of Lakh MIDI dataset [reference LMD], the subset have been matched to entries in the Million Song Dataset and aligned to the 7digital preview MP3s.
+    The style of LMD-aligned include folk pop, metal pop, Rock and roll, jazz pop, traditional pop etc., most of music belong to western pop music.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;The raw MIDI files are very coarse, have much of mistake in music content, such as no melody, superposition of notes, unaligned beat, empty track or merged track, no instrument label etc. A poor data set will seriously affect the training quality of the model.
+    Some of other AI music works not released the processed midi samples or artificially trim the MIDI data, however, manually processing MIDI content on big data is impossible. For general AI tasks, We contribute a series of algorithms for automatically preprocessing and trimming MIDI content based on music theory.
+    These implementation tools are suitable for most types of music and can easily expand big data.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;Following the same screening criteria and processing procedures as MidiPopBand3k, we finally filtered out a modified LMD-aligned (LMD) dataset of 7K+ MIDI files.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;The datasets, tokenized sequence, and all implementation tools are all free to acquired in our GitHub: https://github.com/nahidacake/pop-diffuseq
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;[reference LMD] Colin Raffel. 2016. Learning-based methods for comparing sequences, with applications to audio-to-midi alignment and matching. Ph.D. Dissertation. Columbia University.
+
+<h2>Supplement for music representation</h2>
+<h3> Instrument </h3>
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;We adopt all 16 instrument categories according to the MIDI protocol, then divide the guitar into acoustic guitar and electric guitar, and finally the vocal melody track, a total of 18 categories.
+    <br>All existing musical instruments and sounds are classified into these 18 categories: </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Instrument Category &nbsp; &nbsp;</th>
+<th style="text-align: center">Timbre Cases (program number) &nbsp; &nbsp;</th>
+<th style="text-align: center">Instrument Category &nbsp; &nbsp;</th>
+<th style="text-align: center">Timbre Cases (program number) &nbsp; &nbsp; &nbsp;</th>
+</tr></thead>
+    <tbody>
+<tr>
+<td>Melody</td>
+<td>grand piano(0)</td>
+<td>Chord progression</td>
+<td>grand piano(0)</td>
+</tr>
+<tr>
+<td>Piano</td>
+<td>grand piano(0), Honky-tonk piano(3)</td>
+<td>Chromatic percussion</td>
+<td>marimba(12), xylophone(13)</td>
+</tr>
+<tr>
+<td>Organ</td>
+<td>accordion(21), church organ(19)</td>
+<td>Bass</td>
+<td>acoustic bass(32), electric bass(33)</td>
+</tr>
+<tr>
+<td>Acoustic guitar</td>
+<td>nylon(24), steel(25)</td>
+<td>Electric guitar</td>
+<td>jazz(26), overdriven(29)</td>
+</tr>
+<tr>
+<td>Strings</td>
+<td>violin(40), string ensemble(48)</td>
+<td>Ensemble</td>
+<td>synth strings(51), string ensemble(48)</td>
+</tr>
+<tr>
+<td>Brass</td>
+<td>Trumpet(56), brass section(61)</td>
+<td>Reed</td>
+<td>bassoon(70), clarinet(71)</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td>flute(73), piccolo(72)</td>
+<td>Lead</td>
+<td>square(80)</td>
+</tr>
+<tr>
+<td>pad</td>
+<td>choir(91)</td>
+<td>Effects</td>
+<td>echoes (102)</td>
+</tr>
+<tr>
+<td>Ethnic</td>
+<td>sitar(104), shamisen(106)</td>
+<td>Percussion</td>
+<td>synth drum(118), taiko(116)</td>
+</tr><tr>
+<td>Drum</td>
+<td>drum kit(0, is_drum=True)</td>
+<td>Unknow</td>
+<td>grand piano(0)</td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;There are significant differences in the note distribution of multiple instruments. We recommend proactively telling the model which instruments need to be created, and during the training phase, a strong relationship between the instrument label and note events must be established.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;In our experiments with the official SymphonyNet implement, asking the model to grasp note distribution without condition in a multi-instrument dataset was awkward(such the characteristic of strings, ensemble and lead was ambiguous), and using the network to reclassify instruments on the generated tracks produced secondary deviation.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;Therefore, according to our extensive experiments, it is necessary to make the instrument labels appear repeatedly in the representation sequence during the model training process, and preferably as input conditions during the inference process.
+</p>
+
+<h3> Tempo </h3>
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simply put, tempo determines how quickly the score is played, it is a significant global mark on score. The detailed explanation can be found at https://en.wikipedia.org/wiki/Tempo
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tempo affects the distribution of note onset times and durations, thus having a powerful influence on the emotion and mood. Therefore, we recommend using tempo as input condition for generation rather than letting the AI model choose on its own.
+    We divide the Tempo into 5 types according to bpm range:
+</p>
+<table><thead>
+  <tr>
+  <th style="text-align: center">Tempo Type &nbsp; &nbsp;</th>
+  <th style="text-align: center">BPM Range</th>
+  </tr></thead>
+    <tbody>
+  <tr>
+      <td style="text-align: center">largo</td>
+      <td style="text-align: center"><66</td>
+  </tr>
+  <tr>
+      <td style="text-align: center">andante</td>
+      <td style="text-align: center">66-108</td>
+  </tr>
+  <tr>
+      <td style="text-align: center">moderato</td>
+      <td style="text-align: center">108-126</td>
+ </tr>
+  <tr>
+      <td style="text-align: center">allegro</td>
+      <td style="text-align: center">126-168</td>
+ </tr>
+  <tr>
+      <td style="text-align: center">presto</td>
+      <td style="text-align: center">>168</td>
+  </tr>
+  </tbody>
+  </table>
+
+<h3> Chord </h3>
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In Pop-Diffuseq, Chord progression is the timeline of entire musical scores. Chords include 12 root notes and 9 types:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Major triad, Minor triad, Augmented triad, Diminished triad, Dominant seventh, Major seventh, Minor seventh, Half-diminished seventh.
+</p>
 
 
+<h3> Representation demo</h3>
+<p style="font-size:20px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A multi-instrument score is shown in Figure 2, and its corresponding representation sequence is below the score.
+    </p>
+
+<div class="container">
+    <img src="score-demo.png" alt="score demo" width="40%" height="40%">
+</div>
+<!--<img src="score-demo.png" alt="score demo" width="35%" height="35%">-->
+<!--<p style="text-align:center;">Fig.2. Music score.</p>-->
+<p style="text-align:center;">Fig.2. Music score.</p>
+
+
+<p style="font-size:20px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music content sequence W<sup>m</sup> = [[chord, time0, chord-0-, reserve], [melody, time0, C5, dur2], [melody, time4, C5, dur2], [melody, time8, G5, dur2], [melody, time12, G5, dur2], [bass, time0, C4, dur8], [strings, time0, E4, dur2],
+[strings, time4, G4, dur2], [strings, time8, E5, dur2], [strings, time12, C5, dur2],
+<br>[chord, time16, chord-2-m, reserve], [melody, time0, A5, dur2], [melody, time4, A5, dur2], [melody, time8, G5, dur4], [melody, time16, F5, dur2], [melody, time20, F5, dur2], [melody, time24, E5, dur2], [melody, time28, E5, dur2], [bass, time0, F4, dur4],
+[bass, time8, C4, dur4], [bass, time16, F4, dur4], [bass, time24, C4, dur4], [strings, time0, D5, dur2], [strings, time4, D5, dur2], [strings, time8, C5, dur4], [strings, time16, D5, dur3], [strings, time22, D5, dur1], [strings, time24, C5, dur3], [strings, time30, C5, dur1],
+<br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
+<br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
+</p>
+
+<h2>Supplement for implementation</h2>
+<h3> Representation encoding and note-level masking strategy </h3>
+<p style="font-size:20px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To classic source-to-target (sequence-to-sequence) setting, the masking strategy in original classifier-free discrete diffusion (diffuseq) for NLP tasks fixedly masks the entire target sequence.
+    It is useful for low constraint composition , as the demonstrations of melody generation on this page: The musical content is encoded in two sequences, the source contains the given tracks (chord, piano accompaniment,...) and the target involves the desired track (melody).
+    In this way, all events of the target sequence are scrambled and reconstructed during the diffusion process.
+
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, facing more stringent control tasks, we need more flexible masking methods and neural network structures. For example, in many video soundtrack scenes, background music needs to be created with appointed instruments, tempo and other prompts or scripts.
+    A valid idea is to encode all music content events in target sequence (named W<sup>m</sup> in paper, m means music), and encode all prompts or scripts in source sequence (named W<sup>c</sup>, c means condition). To specific music generation requirement, we simply mask the desired music events (tokens) in Wm and reveal all the given condition events.
+
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mask method with representation encoding is distinctively defined based on concrete task and requirement. In this paper, we train specialized model with different mask strategy from scratch for each task.
+
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Obviously, Another approach is to train a large model with random mask on W<sup>m</sup>, and then fine-tune the model using a distinctive masking strategy on specific task.
+    But we don't have enough pop data, moreover, according to our experiments and the opinions of previous reviewers, mixing different styles of music data together is not conducive to model training. )
+
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to our testing and user feedback on pop-diffuseq and some music AIGC frameworks in various settings, these multifarious strategies will eventually cause two trends in the generated samples, either high yield but low originality, or high originality but low yield.
+    They (yield and originality) are a pair of contradictions for both AI and artists.
+
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)Yield, yield-rate: Satisfaction rate of generated music samples. Even great human artists cannot make all of their works palatable to listeners, and the same goes for AI.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)Originality: the creative power of generative system. The generated music should be as free from the suspicion of "plagiarism" as possible and try not to resemble the baseline in the data set.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After many experiments and modifications, we formed two masking methods, one is neural network (Transformer), the other is expert system (rule-based arithmetic), which respectively correspond to the two requirements of yield rate and originality. We leave the choice to the user.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The system is shown in figure:
+
+    <div class="container">
+                <img src="system.png" alt="system" width="40%" height="40%">
+            </div>
+    <p style="text-align:center;">Fig.3. Pipeline of music AIGC</p>
+
+
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) High yield-rate and man-machine interaction approach.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspired by Microsoft's Meloform, the high yield-rate approach for music generation system combines the white-box expert system and black-box neural network guided by prompts. Meloform uses a rule-based arithmetics to synthesize melody with structure and a BERT-based refinement model to embellish the music from expert systems.
+    In comparison, our AI model can do much more, and our system supports human-machine collaborative creation mode.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The only work of our expert system is to generate an ordered Boolean list of note positions with mask information. The Boolean list (sequence) W<sup>mask</sup> = [m<sub>1</sub>, m<sub>2</sub>, ..., m<sub>i</sub>], where the Boolean variable m<sub>i</sub> indicates whether the corresponding i-th note event needs to be predicted or used as a condition.
+    A position in the sequence W<sup>mask</sup> also represents the position of a note(or event), and the W<sup>mask</sup> naturally constructs the relative positions of all notes in the score.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For convenience, we borrow the concept of "position" from Transformer. In this chapter, the "position" express the relative location of notes on a sheet music. (It is not the onset time or duration time.)
+    If a musical score is compared to a theater and the note are likened to the audience, than the "position" is the reserved seat for a note.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We summarize the position patterns from the data set and music theory based on the categories of instrument orchestration and tempo.
+    In that way, the masked Wm is synthesized through position patterns and logical rules. Afterwards, the masked Wm is organized and encoded into a sequence of tokens using the proposed representation before being fed into diffusion model.
+    Finally, the trained model predicts note events at each marked position, resulting in the entire musical score.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of the benefits of this white-box strategy is that users can participate in the process of musical content generation, that is, human-machine collaborative creation.
+    Users can manually draw the location of the notes or fragments that need to be created by the AI, and then the AI will fill in the score. The cutline is as follows.
+
+    <div class="container">
+                <img src="system_02.png" alt="man-machine interaction" width="70%" height='auto'>
+            </div>
+
+    <p style="text-align:center;">Fig.4. Human-machine collaborative content creation</p>
+
+<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)The AI approach.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A potential problem of synthesize W<sup>mask</sup> with rule-based approaches is that some of the generated pieces may be somewhat similar to the baseline in the dataset.
+    One main reason is that we don't have enough training data.
+    So we tried to use Linear Transformer to generate variant W<sup>mask</sup> to increase the diversity and interest of the music.
+    We suppose that this is a remedial approach, and if our training data is large enough, this problem can be solved.
+    Just like the early OpenAI's AI painting, the art world has also questioned the suspicion of splicing.
+    But now, with the help of big data, AIGC's originality has been greatly improved.
 
 			</section>
 		</article>
 	</main>
-
-
-	
 
 </div>
 
