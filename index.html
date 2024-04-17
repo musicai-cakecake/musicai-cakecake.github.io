@@ -47,13 +47,14 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the supplement page!
     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content generation in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
     The datasets and all of our unfiltered AI generated raw midi samples are available on Github:
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/nahidacake/pop-diffuseq
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models used in these experiments can be downloaded in Google Drive:
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=sharing
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;github.com/musicai-cakecake/pop-diffuseq
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models and LMD dataset used in these experiments can be downloaded in Google Drive:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=drive_link
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our MIDI dataset MidiPopBand3k are also in this web.
 </p>
 
 <div class="container">
-    <img src="‎text_to_score.png" alt="text to score" width="50%" height="50%">
+    <img src="text-to-scores.jpg" alt="MIDI generation guided by musical terms." width="50%" height="50%">
 </div>
 <p style="text-align:center;">Fig.1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
     <br>guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>
@@ -123,7 +124,7 @@
 
 <!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
                 </p>
-<h3>Data set: MidiPopBand3k &nbsp; Masking strategy: high yield</h3>
+<h3>Data set: MidiPopBand3k</h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -198,46 +199,34 @@
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-melody.mp3"/>Your browser does not support the audio element.</audio></td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/17-lmd-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
-  </tbody>
-  </table>
-
-<h3>Data set: LMD &nbsp; Masking strategy: high originality </h3>
-<table><thead>
-  <tr>
-  <th style="text-align: center">Samples    </th>
-  <th style="text-align: center">Input prompts    </th>
-  <th style="text-align: center">Input melody</th>
-  <th style="text-align: center">AI generation</th>
-  </tr></thead>
-    <tbody>
-  <tr>
-      <td style="text-align: center">Sample 1 &nbsp;</td>
+ <tr>
+      <td style="text-align: center">Sample 5 &nbsp;</td>
       <td style="text-align: center">Ensemble, bass, drum, Tempo-Andante &nbsp;</td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/14-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/14-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-  <td style="text-align: center">Sample 2 &nbsp;</td>
+  <td style="text-align: center">Sample 6 &nbsp;</td>
   <td style="text-align: center">Acoustic guitar, electric guitar, bass, percussive, Tempo-Andante &nbsp;</td>
   <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/15-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
   <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/15-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
   </tr>
   <tr>
-      <td style="text-align: center">Sample 3 &nbsp;</td>
+      <td style="text-align: center">Sample 7 &nbsp;</td>
       <td style="text-align: center">Brass, bass, percussive, Tempo-Allegro &nbsp;</td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/35-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/35-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
       <tr>
-      <td style="text-align: center">Sample 4 &nbsp;</td>
+      <td style="text-align: center">Sample 8 &nbsp;</td>
       <td style="text-align: center">electric guitar, bass, percussive, Tempo-Allegro &nbsp;</td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/38-originality-melody.mp3"/>Your browser does not support the audio element.</audio></td>
       <td><audio controls="controls" ><source src="Samples/accompaniment-generation-samples/38-originality-gen.mp3"/>Your browser does not support the audio element.</audio></td>
  </tr>
-    </tbody>
-</table>
+  </tbody>
+  </table>
 
-<h3>Contrast experiment &nbsp; Data set: LMD &nbsp; Masking strategy: high yield </h3>
+<h3>Contrast</h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -268,7 +257,7 @@
   </table>
 
 <h2>Dataset and preprocessing</h2>
-<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;As stated in the paper, We contribute a pop band MIDI dataset MidiPopBand3k and a modified LMD-aligned(LMD) dataset, both of which were used for experiments.
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;As stated in the paper, We contribute a pop band MIDI dataset MidiPopBand3k and a modified LMD-matched(LMD) dataset, both of which were used for experiments.
     <br>&nbsp;&nbsp;&nbsp;&nbsp;MidiPopBand3k is a well-chosen collection of 1000 pop MIDI music carefully selected by our musicians. All 1K raw MIDI files in the dataset are obtained from free Internet sources.
     We then split the music into shorter pieces, resulting in 3K MIDI files. Although the length of music in small clips is shortened, it is sufficient for various music AI tasks.
     The music collection is carefully selected based on a series of criteria:
@@ -279,14 +268,12 @@
     Oriental music (including Chinese pop, J-pop, K-pop and a small amount of Indian pop) accounts for a larger proportion.
 <p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;Our musicians manually annotated the instrument category on each tracks and proofread the tempo of all the music. MidiPopBand3k is suitable for various AI tasks, including music generation, understanding and recommendation.
     We make MidiPopBand3k freely available to help research in the field of music artificial intelligence. The design of instrument categories and tempo will be introduced in subsequent chapters.
-<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;LMD-aligned is a POP subset of Lakh MIDI dataset [reference LMD], the subset have been matched to entries in the Million Song Dataset and aligned to the 7digital preview MP3s.
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;LMD-matched is a POP subset of Lakh MIDI dataset(colinraffel.com/projects/lmd), the subset have been matched to entries in the Million Song Dataset.
     The style of LMD-aligned include folk pop, metal pop, Rock and roll, jazz pop, traditional pop etc., most of music belong to western pop music.
     <br>&nbsp;&nbsp;&nbsp;&nbsp;The raw MIDI files are very coarse, have much of mistake in music content, such as no melody, superposition of notes, unaligned beat, empty track or merged track, no instrument label etc. A poor data set will seriously affect the training quality of the model.
     Some of other AI music works not released the processed midi samples or artificially trim the MIDI data, however, manually processing MIDI content on big data is impossible. For general AI tasks, We contribute a series of algorithms for automatically preprocessing and trimming MIDI content based on music theory.
     These implementation tools are suitable for most types of music and can easily expand big data.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;Following the same screening criteria and processing procedures as MidiPopBand3k, we finally filtered out a modified LMD-aligned (LMD) dataset of 7K+ MIDI files.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;The datasets, tokenized sequence, and all implementation tools are all free to acquired in our GitHub: https://github.com/nahidacake/pop-diffuseq
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;[reference LMD] Colin Raffel. 2016. Learning-based methods for comparing sequences, with applications to audio-to-midi alignment and matching. Ph.D. Dissertation. Columbia University.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;Following the same screening criteria and processing procedures as MidiPopBand3k, we finally filtered out a modified LMD dataset of 14K+ MIDI files.
 
 <h2>Supplement for music representation</h2>
 <h3> Instrument </h3>
@@ -429,62 +416,6 @@
 <br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
-
-<h2>Supplement for implementation</h2>
-<h3> Representation encoding and note-level masking strategy </h3>
-<p style="font-size:20px;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To classic source-to-target (sequence-to-sequence) setting, the masking strategy in original classifier-free discrete diffusion (diffuseq) for NLP tasks fixedly masks the entire target sequence.
-    It is useful for low constraint composition , as the demonstrations of melody generation on this page: The musical content is encoded in two sequences, the source contains the given tracks (chord, piano accompaniment,...) and the target involves the desired track (melody).
-    In this way, all events of the target sequence are scrambled and reconstructed during the diffusion process.
-
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, facing more stringent control tasks, we need more flexible masking methods and neural network structures. For example, in many video soundtrack scenes, background music needs to be created with appointed instruments, tempo and other prompts or scripts.
-    A valid idea is to encode all music content events in target sequence (named W<sup>m</sup> in paper, m means music), and encode all prompts or scripts in source sequence (named W<sup>c</sup>, c means condition). To specific music generation requirement, we simply mask the desired music events (tokens) in Wm and reveal all the given condition events.
-
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mask method with representation encoding is distinctively defined based on concrete task and requirement. In this paper, we train specialized model with different mask strategy from scratch for each task.
-
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Obviously, Another approach is to train a large model with random mask on W<sup>m</sup>, and then fine-tune the model using a distinctive masking strategy on specific task.
-    But we don't have enough pop data, moreover, according to our experiments and the opinions of previous reviewers, mixing different styles of music data together is not conducive to model training. )
-
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;According to our testing and user feedback on pop-diffuseq and some music AIGC frameworks in various settings, these multifarious strategies will eventually cause two trends in the generated samples, either high yield but low originality, or high originality but low yield.
-    They (yield and originality) are a pair of contradictions for both AI and artists.
-
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)Yield, yield-rate: Satisfaction rate of generated music samples. Even great human artists cannot make all of their works palatable to listeners, and the same goes for AI.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)Originality: the creative power of generative system. The generated music should be as free from the suspicion of "plagiarism" as possible and try not to resemble the baseline in the data set.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After many experiments and modifications, we formed two masking methods, one is neural network (Transformer), the other is expert system (rule-based arithmetic), which respectively correspond to the two requirements of yield rate and originality. We leave the choice to the user.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The system is shown in figure:
-
-    <div class="container">
-                <img src="system.png" alt="system" width="40%" height="40%">
-            </div>
-    <p style="text-align:center;">Fig.3. Pipeline of music AIGC</p>
-
-
-<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) High yield-rate and man-machine interaction approach.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inspired by Microsoft's Meloform, the high yield-rate approach for music generation system combines the white-box expert system and black-box neural network guided by prompts. Meloform uses a rule-based arithmetics to synthesize melody with structure and a BERT-based refinement model to embellish the music from expert systems.
-    In comparison, our AI model can do much more, and our system supports human-machine collaborative creation mode.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The only work of our expert system is to generate an ordered Boolean list of note positions with mask information. The Boolean list (sequence) W<sup>mask</sup> = [m<sub>1</sub>, m<sub>2</sub>, ..., m<sub>i</sub>], where the Boolean variable m<sub>i</sub> indicates whether the corresponding i-th note event needs to be predicted or used as a condition.
-    A position in the sequence W<sup>mask</sup> also represents the position of a note(or event), and the W<sup>mask</sup> naturally constructs the relative positions of all notes in the score.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For convenience, we borrow the concept of "position" from Transformer. In this chapter, the "position" express the relative location of notes on a sheet music. (It is not the onset time or duration time.)
-    If a musical score is compared to a theater and the note are likened to the audience, than the "position" is the reserved seat for a note.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We summarize the position patterns from the data set and music theory based on the categories of instrument orchestration and tempo.
-    In that way, the masked Wm is synthesized through position patterns and logical rules. Afterwards, the masked Wm is organized and encoded into a sequence of tokens using the proposed representation before being fed into diffusion model.
-    Finally, the trained model predicts note events at each marked position, resulting in the entire musical score.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One of the benefits of this white-box strategy is that users can participate in the process of musical content generation, that is, human-machine collaborative creation.
-    Users can manually draw the location of the notes or fragments that need to be created by the AI, and then the AI will fill in the score. The cutline is as follows.
-
-    <div class="container">
-                <img src="system_02.png" alt="man-machine interaction" width="70%" height='auto'>
-            </div>
-
-    <p style="text-align:center;">Fig.4. Human-machine collaborative content creation</p>
-
-<p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)The AI approach.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A potential problem of synthesize W<sup>mask</sup> with rule-based approaches is that some of the generated pieces may be somewhat similar to the baseline in the dataset.
-    One main reason is that we don't have enough training data.
-    So we tried to use Linear Transformer to generate variant W<sup>mask</sup> to increase the diversity and interest of the music.
-    We suppose that this is a remedial approach, and if our training data is large enough, this problem can be solved.
-    Just like the early OpenAI's AI painting, the art world has also questioned the suspicion of splicing.
-    But now, with the help of big data, AIGC's originality has been greatly improved.
 
 			</section>
 		</article>
