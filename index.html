@@ -45,11 +45,12 @@
 
 <p style="font-size:20px;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the supplement page!
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content generation in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implement code are available on Github: github.com/musicai-cakecake/pop-diffuseq
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content infilling in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implement code are available on Github:
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/musicai-cakecake/pop-diffuseq
     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models, datasets and all unfiltered samples can be downloaded in Google Drive:
     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=drive_link
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our MIDI dataset MidiPopBand3k are also in this link.
+    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our MIDI dataset PopBand3k are also in this link.
 </p>
 
 <div class="container">
@@ -123,7 +124,7 @@
 
 <!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
                 </p>
-<h3>Data set: MidiPopBand3k</h3>
+<h3>Data set: PopBand3k</h3>
 <table><thead>
   <tr>
   <th style="text-align: center">Samples    </th>
@@ -229,7 +230,7 @@
 <table>
     <thead>
   <tr>
-  <th style="text-align: center">Samples    </th>
+  <th style="text-align: center">Samples</th>
   <th style="text-align: center">Input melody</th>
   <th style="text-align: center">POPMAG</th>
   <th style="text-align: center">Our Pop-Diffuseq</th>
@@ -452,6 +453,46 @@
 <br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
+
+    <h3>Objective evaluation supplement</h3>
+    <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, we complement the objective evaluation of generated music:
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Figure 3-7 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for a pair of instrument.
+        The result shows that POPdiffuseq correctly produces musical content under the requirements of guitar prompt [27], and the generated content has both the characteristics of guitar and the richness of AI.
+    </p>
+
+    <div class="container">
+    <img src="picture/objective_eval_01.png" alt="objective_eval_01" width="50%" height="50%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_02.png" alt="objective_eval_02" width="50%" height="50%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_03.png" alt="objective_eval_03" width="50%" height="50%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_04.png" alt="objective_eval_04" width="50%" height="50%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_05.png" alt="objective_eval_05" width="50%" height="50%">
+    </div>
+    <br>
+    <div class="container">
+    <img src="picture/objective_eval_06.png" alt="objective_eval_06" width="50%" height="50%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_07.png" alt="objective_eval_07" width="40%" height="40%">
+    </div>
+    <br>
+        <div class="container">
+    <img src="picture/objective_eval_08.png" alt="objective_eval_08" width="90%" height="90%">
+    </div>
+
 
 			</section>
 		</article>
