@@ -444,7 +444,6 @@
 <!--<p style="text-align:center;">Fig.2. Music score.</p>-->
 <p style="text-align:center;">Fig.2. Music score.</p>
 
-
 <p style="font-size:20px;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music content sequence W<sup>m</sup> = [[chord, time0, chord-0-, reserve], [melody, time0, C5, dur2], [melody, time4, C5, dur2], [melody, time8, G5, dur2], [melody, time12, G5, dur2], [bass, time0, C4, dur8], [strings, time0, E4, dur2],
 [strings, time4, G4, dur2], [strings, time8, E5, dur2], [strings, time12, C5, dur2],
@@ -453,46 +452,52 @@
 <br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
-
     <h3>Objective evaluation supplement</h3>
     <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, we complement the objective evaluation of generated music:
         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Figure 3-7 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for a pair of instrument.
-        The result shows that POPdiffuseq correctly produces musical content under the requirements of guitar prompt [27], and the generated content has both the characteristics of guitar and the richness of AI.
+        Figure 3-10 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
+        Reference instrument means the human created music in test data set.
+        The result shows that POP-diffuseq correctly produces musical content under the requirements of instrumental prompts, and the generated content has both the characteristics of instruments and the richness of AI.
     </p>
-
     <div class="container">
     <img src="picture/objective_eval_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.3. Objective evaluation for generated and reference guitar.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.4. Objective evaluation for generated and reference piano.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.5. Objective evaluation for generated and reference strings.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_04.png" alt="objective_eval_04" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.6. Objective evaluation for generated and reference organ.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_05.png" alt="objective_eval_05" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.7. Objective evaluation for generated and reference ensemble.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_06.png" alt="objective_eval_06" width="50%" height="50%">
     </div>
+    <p style="text-align:center;">Fig.8. Objective evaluation for generated and reference reed.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_07.png" alt="objective_eval_07" width="40%" height="40%">
     </div>
+    <p style="text-align:center;">Fig.9. The pitch class transition matrix for 3 sets of bass.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
-
+    <p style="text-align:center;">Fig.10. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
 
 			</section>
 		</article>
