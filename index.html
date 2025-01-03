@@ -56,8 +56,18 @@
 <div class="container">
     <img src="text-to-scores.jpg" alt="MIDI generation guided by musical terms." width="50%" height="50%">
 </div>
-<p style="text-align:center;">Fig.1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
+<p style="text-align:center;">Figure 1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
     <br>guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>
+
+    <p style="font-size:20px;">
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The greatest value of this infilling method is to support the human-intelligent interaction of Artificial Intelligence Generated Content (AIGC).
+        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some typical scenarios are shown in Figure 2.
+    </p>
+
+    <div class="container">
+        <img src="interaction.jpg" alt="Interactive generation by Pop-diffuseq." width="35%" height="35%">
+    </div>
+    <p style="text-align:center;">Figure 2. Interactive generation by Pop-diffuseq.</p>
 
 <!--<img src="‎text_to_score.png" alt="text to score" width="40%" height="40%">-->
 
@@ -68,13 +78,13 @@
         In order to fairly demonstrate the contributions of the representation, attention algorithm and framework proposed in this paper,
         the bidirectional encoder structures of our Pop-Diffuseq and Diffuseq comparison group both adopt the benchmark configuration ’bert-base-uncased’ of Hugging-face.
         Moreover, the hyperparameters and training data are also required to be exactly the same.
-        We set the length of a sequence (the entire SEQ2SEQ) to 512, which contains 125 notes, 7 prompts and 5 special symbols.
+        We set the length of a sequence to 512, which contains 125 notes, 7 prompts and 5 special symbols.
         4 sequences are spliced into one piece of music. The hidden size of encoder layers are 768, which is assigned to 12 attention heads.
         Four output linear layers are shared parameters(actually reuse one dense network in program coding).
         We employ many accelerated approaches for both the training and sampling stages, such as the fast ODE solver(DPM-solver) for diffusion model, FP16 for GPU acceleration and AI platform Pytorch2.0.
         The diffusion steps in training stage are 2000, 10 steps in decoding stage.
         Sqrt noise schedule are used in training stage.
-        We train Pop-Diffuseq model and comparison group on 4 NVIDIA 4090 GPUs, with batch size of 40 SEQ2SEQ. It takes 40k steps for training until convergence.
+        We train Pop-Diffuseq model and comparison group on 4 NVIDIA 4090 GPUs, with batch size of 40 sequence. It takes 40k steps for training until convergence.
     </p>
 
 
@@ -458,7 +468,7 @@
 </div>
 <!--<img src="score-demo.png" alt="score demo" width="35%" height="35%">-->
 <!--<p style="text-align:center;">Fig.2. Music score.</p>-->
-<p style="text-align:center;">Fig.2. Music score.</p>
+<p style="text-align:center;">Figure 3. Music score.</p>
 
 <p style="font-size:20px;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music content sequence W<sup>m</sup> = [[chord, time0, chord-0-, reserve], [melody, time0, C5, dur2], [melody, time4, C5, dur2], [melody, time8, G5, dur2], [melody, time12, G5, dur2], [bass, time0, C4, dur8], [strings, time0, E4, dur2],
@@ -471,49 +481,49 @@
     <h3>Objective evaluation supplement</h3>
     <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, we complement the objective evaluation of generated music:
         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Figure 3-10 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
+        Figure 4-11 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
         Reference instrument means the human created music in test data set.
         The result shows that POP-diffuseq correctly produces musical content under the requirements of instrumental prompts, and the generated content has both the characteristics of instruments and the richness of AI.
     </p>
     <div class="container">
     <img src="picture/objective_eval_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.3. Objective evaluation for generated and reference guitar.</p>
+    <p style="text-align:center;">Figure 4. Objective evaluation for generated and reference guitar.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.4. Objective evaluation for generated and reference piano.</p>
+    <p style="text-align:center;">Figure 5. Objective evaluation for generated and reference piano.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.5. Objective evaluation for generated and reference strings.</p>
+    <p style="text-align:center;">Figure 6. Objective evaluation for generated and reference strings.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_04.png" alt="objective_eval_04" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.6. Objective evaluation for generated and reference organ.</p>
+    <p style="text-align:center;">Figure 7. Objective evaluation for generated and reference organ.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_05.png" alt="objective_eval_05" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.7. Objective evaluation for generated and reference ensemble.</p>
+    <p style="text-align:center;">Figure 8. Objective evaluation for generated and reference ensemble.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_06.png" alt="objective_eval_06" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Fig.8. Objective evaluation for generated and reference reed.</p>
+    <p style="text-align:center;">Figure 9. Objective evaluation for generated and reference reed.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_07.png" alt="objective_eval_07" width="40%" height="40%">
     </div>
-    <p style="text-align:center;">Fig.9. The pitch class transition matrix for 3 sets of bass.</p>
+    <p style="text-align:center;">Figure 10. The pitch class transition matrix for 3 sets of bass.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
-    <p style="text-align:center;">Fig.10. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
+    <p style="text-align:center;">Figure 11. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
 
 			</section>
 		</article>
