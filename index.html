@@ -63,6 +63,21 @@
 
 <!--<p style="font-size:18px;"> POP-Diffuseq can create pop music scores guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>-->
 
+    <h2>Model configurations</h2>
+    <p style="font-size:20px;">
+        In order to fairly demonstrate the contributions of the representation, attention algorithm and framework proposed in this paper,
+        the bidirectional encoder structures of our Pop-Diffuseq and Diffuseq comparison group both adopt the benchmark configuration ’bert-base-uncased’ of Hugging-face.
+        Moreover, the hyperparameters and training data are also required to be exactly the same.
+        We set the length of a sequence (the entire SEQ2SEQ) to 512, which contains 125 notes, 7 prompts and 5 special symbols.
+        4 sequences are spliced into one piece of music. The hidden size of encoder layers are 768, which is assigned to 12 attention heads.
+        Four output linear layers are shared parameters(actually reuse one dense network in program coding).
+        We employ many accelerated approaches for both the training and sampling stages, such as the fast ODE solver(DPM-solver) for diffusion model, FP16 for GPU acceleration and AI platform Pytorch2.0.
+        The diffusion steps in training stage are 2000, 10 steps in decoding stage.
+        Sqrt noise schedule are used in training stage.
+        We train Pop-Diffuseq model and comparison group on 4 NVIDIA 4090 GPUs, with batch size of 40 SEQ2SEQ. It takes 40k steps for training until convergence.
+    </p>
+
+
 <h2>Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
 <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generate melody based on a given piano track. </p>
 <h3>Data set: Pop909. </h3>
@@ -124,6 +139,7 @@
 
 <!--                    <br> All our hundreds of AI-generation midis without filtrate could be available from web.-->
                 </p>
+
 <h3>Data set: PopBand3k</h3>
 <table><thead>
   <tr>
