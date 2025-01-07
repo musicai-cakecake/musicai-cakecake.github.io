@@ -32,60 +32,57 @@
 <body>
 
 <div class="container">
+    <header role="banner"></header>
+    <main role="main">
+        <article itemscope itemtype="https://schema.org/BlogPosting">
+            <h1 class="entry-title" itemprop="headline">Pop-Diffuseq paper supplement and generated samples</h1>
+            <section itemprop="entry-text">
 
-	<header role="banner">
+                <p style="font-size:20px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the supplement page!
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content infilling in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implement code are available on Github:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/musicai-cakecake/pop-diffuseq
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models, datasets and all unfiltered samples can be downloaded in Google Drive:
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=drive_link
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our MIDI dataset PopBand3k are also in this link.
+                </p>
 
-	</header>
+                <div class="container">
+                    <img src="text-to-scores.jpg" alt="MIDI generation guided by musical terms." width="50%" height="50%">
+                </div>
+                <p style="text-align:center;font-size:20px">
+                    Figure 1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
+                    <br>guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.
+                </p>
 
-	<main role="main">
-		<article itemscope itemtype="https://schema.org/BlogPosting">
+                <h2>Method and pipeline model configurations</h2>
+                <p style="font-size:20px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We present POP-Diffuseq, a pop music infilling model based on classifier-free discrete diffusion.
+                    In this work, the midi content (such pitch,onset,duration etc.) is encoded in a syntax pattern of Structure-Aligned (SA) tensor,
+                    where rows represent note (chord) units and columns express the attributes of the notes (chords).
+                    The encoded tensors will be trained and inferred by the deep learning model.
+                    Of course, the music score (midi file) is decoded from inferred tensor via the Structure-Aligned (SA) grammar pattern.
+                    The pipeline is shown in Figure 2.
+                    This approach is called “representation learning” in textual and symbolic music research.
+                </p>
+                <div class="container">
+                    <img src="picture/pipeline.png" alt="Pipeline." width="80%" height="80%">
+                </div>
+                <p style="text-align:center;font-size:20px">
+                    Figure 2. Method and pipeline of training and inference.
+                </p>
+                <p style="font-size:20px;">
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The greatest value of this infilling method is to support the human-intelligent interaction of Artificial Intelligence Generated Content (AIGC).
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some typical scenarios are shown in Figure 3.
+                </p>
 
-<h1 class="entry-title" itemprop="headline">Pop-Diffuseq paper supplement and generated samples</h1>
-<section itemprop="entry-text">
-
-<p style="font-size:20px;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to the supplement page!
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP-Diffuseq, the digital music content infilling in Midi format. The audio samples on this page are exported from Apple Logic build-in sounds.
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Implement code are available on Github:
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/musicai-cakecake/pop-diffuseq
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The trained models, datasets and all unfiltered samples can be downloaded in Google Drive:
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://drive.google.com/drive/folders/1OWI_sfYmYn2gB13KccO9kkXCP2x8Z-1x?usp=drive_link
-    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Our MIDI dataset PopBand3k are also in this link.
-</p>
-
-<div class="container">
-    <img src="text-to-scores.jpg" alt="MIDI generation guided by musical terms." width="50%" height="50%">
-</div>
-<p style="text-align:center;">Figure 1. Pop-Diffuseq: Conditional pop music accompaniment generation. POP-Diffuseq can create pop music scores
-    <br>guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>
-
-    <p style="font-size:20px;">
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The greatest value of this infilling method is to support the human-intelligent interaction of Artificial Intelligence Generated Content (AIGC).
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Some typical scenarios are shown in Figure 2.
-    </p>
-
-    <div class="container">
-        <img src="interaction.jpg" alt="Interactive generation by Pop-diffuseq." width="35%" height="35%">
-    </div>
-    <p style="text-align:center;">Figure 2. Interactive generation by Pop-diffuseq.</p>
+                <div class="container"><img src="interaction.jpg" alt="Interactive generation by Pop-diffuseq." width="35%" height="35%"></div>
+                <p style="text-align:center;font-size:20px">Figure 3. Interactive generation by Pop-diffuseq.</p>
 
 <!--<img src="‎text_to_score.png" alt="text to score" width="40%" height="40%">-->
 
 <!--<p style="font-size:18px;"> POP-Diffuseq can create pop music scores guided by musical terms(prompts) such as instrument and tempo, and is qualified to any-to-any instruments generation.</p>-->
-
-    <h2>Model configurations</h2>
-    <p style="font-size:20px;">
-        In order to fairly demonstrate the contributions of the representation, attention algorithm and framework proposed in this paper,
-        the bidirectional encoder structures of our Pop-Diffuseq and Diffuseq comparison group both adopt the benchmark configuration ’bert-base-uncased’ of Hugging-face.
-        Moreover, the hyperparameters and training data are also required to be exactly the same.
-        We set the length of a sequence to 512, which contains 125 notes, 7 prompts and 5 special symbols.
-        4 sequences are spliced into one piece of music. The hidden size of encoder layers are 768, which is assigned to 12 attention heads.
-        Four output linear layers are shared parameters(actually reuse one dense network in program coding).
-        We employ many accelerated approaches for both the training and sampling stages, such as the fast ODE solver(DPM-solver) for diffusion model, FP16 for GPU acceleration and AI platform Pytorch2.0.
-        The diffusion steps in training stage are 2000, 10 steps in decoding stage.
-        Sqrt noise schedule are used in training stage.
-        We train Pop-Diffuseq model and comparison group on 4 NVIDIA 4090 GPUs, with batch size of 40 sequence. It takes 40k steps for training until convergence.
-    </p>
 
 
 <h2>Piano and chord conditioned melody generation samples (accompaniment to melody)</h2>
@@ -329,14 +326,28 @@
     <br>&nbsp;&nbsp;&nbsp;&nbsp;(3) The category of musical instrument are distinct enough to be identified in all tracks.
     <br>&nbsp;&nbsp;&nbsp;&nbsp;(4) Musical styles range from classic pop, rock, jazz and country etc. Try to avoid rap and electronic music as they are not easy to study together.
     Oriental music (including Chinese pop, J-pop, K-pop and a small amount of Indian pop) accounts for a larger proportion.
-<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;Our musicians manually annotated the instrument category on each tracks and proofread the tempo of all the music. MidiPopBand3k is suitable for various AI tasks, including music generation, understanding and recommendation.
+<p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;Our musicians manually annotated the instrument category on each track and proofread the tempo of all the music. MidiPopBand3k is suitable for various AI tasks, including music generation, understanding and recommendation.
     We make MidiPopBand3k freely available to help research in the field of music artificial intelligence. The design of instrument categories and tempo will be introduced in subsequent chapters.
 <p style="font-size:20px;"> &nbsp;&nbsp;&nbsp;&nbsp;LMD-matched is a POP subset of Lakh MIDI dataset(colinraffel.com/projects/lmd), the subset have been matched to entries in the Million Song Dataset.
-    The style of LMD-aligned include folk pop, metal pop, Rock and roll, jazz pop, traditional pop etc., most of music belong to western pop music.
+    The style of LMD-aligned include folk pop, metal pop, Rock and roll, jazz pop, traditional pop etc., most music belong to western pop music.
     <br>&nbsp;&nbsp;&nbsp;&nbsp;The raw MIDI files are very coarse, have much of mistake in music content, such as no melody, superposition of notes, unaligned beat, empty track or merged track, no instrument label etc. A poor data set will seriously affect the training quality of the model.
     Some of other AI music works not released the processed midi samples or artificially trim the MIDI data, however, manually processing MIDI content on big data is impossible. For general AI tasks, We contribute a series of algorithms for automatically preprocessing and trimming MIDI content based on music theory.
     These implementation tools are suitable for most types of music and can easily expand big data.
     <br>&nbsp;&nbsp;&nbsp;&nbsp;Following the same screening criteria and processing procedures as MidiPopBand3k, we finally filtered out a modified LMD dataset of 14K+ MIDI files.
+
+                <h2>Model configurations</h2>
+                <p style="font-size:20px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to fairly demonstrate the contributions of the representation, attention algorithm and framework proposed in this paper,
+                    the bidirectional encoder structures of our Pop-Diffuseq and Diffuseq comparison group both adopt the benchmark configuration ’bert-base-uncased’ of Hugging-face.
+                    Moreover, the hyperparameters and training data are also required to be exactly the same.
+                    We set the length of a sequence to 512, which contains 125 notes, 7 prompts and 5 special symbols.
+                    4 sequences are spliced into one piece of music. The hidden size of encoder layers are 768, which is assigned to 12 attention heads.
+                    Four output linear layers are shared parameters(actually reuse one dense network in program coding).
+                    We employ many accelerated approaches for both the training and sampling stages, such as the fast ODE solver(DPM-solver) for diffusion model, FP16 for GPU acceleration and AI platform Pytorch2.0.
+                    The diffusion steps in training stage are 2000, 10 steps in decoding stage.
+                    Sqrt noise schedule are used in training stage.
+                    We train Pop-Diffuseq model and comparison group on 4 NVIDIA 4090 GPUs, with batch size of 40 sequence. It takes 40k steps for training until convergence.
+                </p>
 
 <h2>Supplement for music representation</h2>
 <h3> Instrument </h3>
@@ -460,7 +471,7 @@
 
 <h3> Representation demo</h3>
 <p style="font-size:20px;">
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A multi-instrument score is shown in Figure 2, and its corresponding representation sequence is below the score.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A multi-instrument score is shown in Figure 4, and its corresponding representation sequence is below the score.
     </p>
 
 <div class="container">
@@ -468,7 +479,7 @@
 </div>
 <!--<img src="score-demo.png" alt="score demo" width="35%" height="35%">-->
 <!--<p style="text-align:center;">Fig.2. Music score.</p>-->
-<p style="text-align:center;">Figure 3. Music score.</p>
+<p style="text-align:center;font-size:20px">Figure 4. Music score.</p>
 
 <p style="font-size:20px;">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Music content sequence W<sup>m</sup> = [[chord, time0, chord-0-, reserve], [melody, time0, C5, dur2], [melody, time4, C5, dur2], [melody, time8, G5, dur2], [melody, time12, G5, dur2], [bass, time0, C4, dur8], [strings, time0, E4, dur2],
@@ -478,52 +489,52 @@
 <br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
-    <h3>Objective evaluation supplement</h3>
+    <h2>Objective evaluation supplement</h2>
     <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, we complement the objective evaluation of generated music:
         <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Figure 4-11 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
+        Figure 5-12 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
         Reference instrument means the human created music in test data set.
         The result shows that POP-diffuseq correctly produces musical content under the requirements of instrumental prompts, and the generated content has both the characteristics of instruments and the richness of AI.
     </p>
     <div class="container">
     <img src="picture/objective_eval_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 4. Objective evaluation for generated and reference guitar.</p>
+    <p style="text-align:center;font-size:20px">Figure 5. Objective evaluation for generated and reference guitar.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 5. Objective evaluation for generated and reference piano.</p>
+    <p style="text-align:center;font-size:20px">Figure 6. Objective evaluation for generated and reference piano.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 6. Objective evaluation for generated and reference strings.</p>
+    <p style="text-align:center;font-size:20px">Figure 7. Objective evaluation for generated and reference strings.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_04.png" alt="objective_eval_04" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 7. Objective evaluation for generated and reference organ.</p>
+    <p style="text-align:center;font-size:20px">Figure 8. Objective evaluation for generated and reference organ.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_05.png" alt="objective_eval_05" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 8. Objective evaluation for generated and reference ensemble.</p>
+    <p style="text-align:center;font-size:20px">Figure 9. Objective evaluation for generated and reference ensemble.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_06.png" alt="objective_eval_06" width="50%" height="50%">
     </div>
-    <p style="text-align:center;">Figure 9. Objective evaluation for generated and reference reed.</p>
+    <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference reed.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_07.png" alt="objective_eval_07" width="40%" height="40%">
     </div>
-    <p style="text-align:center;">Figure 10. The pitch class transition matrix for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 11. The pitch class transition matrix for 3 sets of bass.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
-    <p style="text-align:center;">Figure 11. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 12. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
 
 			</section>
 		</article>
