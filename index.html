@@ -489,52 +489,75 @@
 <br>[chord, time32, chord-3-m7, reserve], [melody, time0, D5, dur2], [melody, time4, D5, dur2], [bass, time0, G4, dur4], [strings, time0, D5, dur2], [strings, time4, E5, dur2],
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
+
+
     <h2>Objective evaluation supplement</h2>
-    <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;On this page, we complement the objective evaluation of generated music:
-        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Figure 5-12 shows the pitch classes histogram, pitch class transition matrix (PCTM), average duration and onset interval for generated and reference instruments on test data set.
+                <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A) Model perplexity (PPL).
+                    The total stage of PPL curves are present in Figure 5.
+                    Compared to the baseline, our Pop-Diffuseq (green curve) converges faster, has lower PPL in the stable phase, and overfits later.
+                    The PPL curves of all settings in the stable phase are shown in the Figure 6.
+                    Pop-Diffuseq maintains the steady(variance<0.237) lowest value and is 55.89% lower than the average value of the baseline DiffuSeq (purple curve) over 8 valid recording points.
+                    On the contrary, DiffuSeq is unstable(variance>13 in converge phase) and fluctuates greatly throughout the training process.
+                    The DiffuSeq with la-attention(red curve) are lower than baseline DiffuSeq, indicating that la-attention can improve the fitting of model but is still unstable.
+                    The multi-head output module and modified objective function are helpful for the Pop-Diffuseq.
+                    In fact, we first reproduced the decoder-based SymphonyNet with linear transformer and MMR method, but their Loss and PPL metrics could not converge to a suitable interval in accompaniment task.
+                </p>
+                <div class="container">
+                    <img src="picture/ppl01.jpg" alt="ppl01" width="30%" height="30%">
+                </div>
+                <p style="text-align:center;font-size:20px">Figure 5. PPL curve for total stage.</p>
+                <div class="container">
+                    <img src="picture/ppl02.jpg" alt="ppl02" width="30%" height="30%">
+                </div>
+                <p style="text-align:center;font-size:20px">Figure 6. PPL curves of all settings in the stable phase.</p>
+
+
+    <p style="font-size:20px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) Objective evaluation for symbolic music. Figure 7-14 shows the pitch classes histogram, pitch class transition matrix (PCTM),
+        average duration and onset interval for generated and reference instruments on test data set.
         Reference instrument means the human created music in test data set.
-        The result shows that POP-diffuseq correctly produces musical content under the requirements of instrumental prompts, and the generated content has both the characteristics of instruments and the richness of AI.
+        The result shows that POP-diffuseq correctly produces musical content under the requirements of instrumental prompts,
+        and the generated content has both the characteristics of instruments and the richness of AI.
     </p>
     <div class="container">
     <img src="picture/objective_eval_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 5. Objective evaluation for generated and reference guitar.</p>
+    <p style="text-align:center;font-size:20px">Figure 7. Objective evaluation for generated and reference guitar.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 6. Objective evaluation for generated and reference piano.</p>
+    <p style="text-align:center;font-size:20px">Figure 8. Objective evaluation for generated and reference piano.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 7. Objective evaluation for generated and reference strings.</p>
+    <p style="text-align:center;font-size:20px">Figure 9. Objective evaluation for generated and reference strings.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_04.png" alt="objective_eval_04" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 8. Objective evaluation for generated and reference organ.</p>
+    <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference organ.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_05.png" alt="objective_eval_05" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 9. Objective evaluation for generated and reference ensemble.</p>
+    <p style="text-align:center;font-size:20px">Figure 11. Objective evaluation for generated and reference ensemble.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_06.png" alt="objective_eval_06" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference reed.</p>
+    <p style="text-align:center;font-size:20px">Figure 12. Objective evaluation for generated and reference reed.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_07.png" alt="objective_eval_07" width="40%" height="40%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 11. The pitch class transition matrix for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 13. The pitch class transition matrix for 3 sets of bass.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 12. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 14. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
 
 			</section>
 		</article>
