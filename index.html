@@ -513,7 +513,7 @@
 
 
     <p style="font-size:20px;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) Objective evaluation for symbolic music. Figure 7-16 shows the pitch classes histogram, pitch class transition matrix (PCTM),
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) Objective evaluation for symbolic music. Figure 7-16 shows the pitch class transition matrix (PCTM), pitch classes histogram,
         average duration and onset interval for generated and reference instruments on test data set.
         Reference instrument means the human created music in test data set.
         The result shows that our POP-diffuseq correctly produces musical content under the requirements of instrumental prompts,
@@ -544,6 +544,22 @@
     <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference piano.
         <br>The generated piano are present by AMT model.</p>
     <br>
+
+    <p style="font-size:20px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 7 to 10 show two groups of comparative tests.
+        Two models are compared, one is our model (Pop-diffuseq) and the other is the latest SOTA model AMT which is published in the Transactions on Machine Learning Research, 2024.
+        They are both trained and evaluated on the LMD dataset.
+        The generated and reference samples of AMT are obtained by the official Colab Notebook: https://johnthickstun.com/anticipation/
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 7 and 8 are a pair of guitar tests. Figure 9 and 10 are guitar tests.
+        Regarding PTCM, Pop-diffuseq is competent for more complex content,
+        and the images of generated PTCM are richer for AMT, indicating the richness of our model.
+        Both models can learn the characteristics of the instrument because the shape of the generated PTCMs are equivalent to the references.
+        For pitch classes histogram, average duration and onset interval,
+        the more similar the generated histogram is to the reference, the better.
+        The Pop-diffuseq model handles the characteristics of musical instruments better.
+    </p>
+
         <div class="container">
     <img src="picture/objective_eval_our_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
@@ -573,7 +589,11 @@
     <img src="picture/objective_eval_our_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
     <p style="text-align:center;font-size:20px">Figure 16. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
-
+    <p style="font-size:20px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 11 to 16 present various samples of musical instruments created by our model.
+        They are randomly selected, not hand-picked, and you can reproduce them using our public code and platform.
+        These images show that our model can well mimic the characteristics of human-composed musical scores, which is of great value for commercial applications.
+    </p>
 			</section>
 		</article>
 	</main>
