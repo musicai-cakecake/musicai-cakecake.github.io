@@ -493,6 +493,8 @@
 
     <h2>Objective evaluation supplement</h2>
                 <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A) Model perplexity (PPL).
+                    We calculate token-wise PPL on the Validation set (different with train set).
+                    In all the Diffuseq-based comparison sets, we employ the same hyperparameter(layers, heads number of attention, embedding shape, etc.) in different model settings.
                     The total stage of PPL curves are present in Figure 5.
                     Compared to the baseline, our Pop-Diffuseq (green curve) converges faster, has lower PPL in the stable phase, and overfits later.
                     The PPL curves of all settings in the stable phase are shown in the Figure 6.
