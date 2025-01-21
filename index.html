@@ -490,14 +490,42 @@
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
 
+    <h2>Input content embedding and output module</h2>
+                <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Some notable differences between our model and GPT-like textual models are the contextual (music content) embeddings and the output module.
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    As shown in Figure 5 (left), Embedding is used to convert integer event tokens into floating-point embedding vectors.
+                    The size of 3D embedding tenser for a piece of music is [𝑖, 𝑗, 𝑑], where 𝑖, 𝑗, 𝑑 are the length of notes plus prompts, attributes and embedding vector.
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At the end of framework, we design an output module that combines multiple linear layers and classification masks for structurally aligned tensors.
+                    This module is used to map the encoder hidden state to a certain attribute category absolutely correctly.
+                    For example, the hidden vector belonging to the pitch-dimension(third column) in the tensor must be mapped to one of 72 categories of pitch, and not be classified into duration or other categories.
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The output module is shown in figure 5 (right).
+                    Linear layer (colored trapezoids utilize a fully connected network to convert a hidden vector into an probabilities sequence of the same length as the dictionary(vocab size),
+                    which reflects the probability scores of the tokens.
+                    We divide hidden state tensor into 4 blocks by column(attributes), and arrange 4 linear layers to predict their respective probability scores.
+                    The cross-modal information is concatenated with the first block (instrument attributes) and fed into the first linear layer.
+                    Obtained probabilities is then multiplied bitwise by a 0-1 masking sequence 𝑀𝑎𝑠𝑘 𝑗 .
+                    Tokens with probability scores set to 0 will not be selected.
+                    Finally, the predictions are concatenated based on the grammatical structure of the representation.
+                </p>
+                <div class="container">
+                    <img src="picture/emb.jpg" alt="input embedding and output module" width="40%" height="40%">
+                </div>
+                <p style="text-align:center;font-size:20px">Figure 5. Input content embedding method and output module.</p>
+
+
 
     <h2>Objective evaluation supplement</h2>
                 <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A) Model perplexity (PPL).
                     We calculate token-wise PPL on the Validation set (different with train set).
+                    The lower the PPL index, the better.
                     In all the Diffuseq-based comparison sets, we employ the same hyperparameter(layers, heads number of attention, embedding shape, etc.) in different model settings.
-                    The total stage of PPL curves are present in Figure 5.
+                    The total stage of PPL curves are present in Figure 6.
                     Compared to the baseline, our Pop-Diffuseq (green curve) converges faster, has lower PPL in the stable phase, and overfits later.
-                    The PPL curves of all settings in the stable phase are shown in the Figure 6.
+                    The PPL curves of all settings in the stable phase are shown in the Figure 7.
                     Pop-Diffuseq maintains the steady(variance<0.237) lowest value and is 55.89% lower than the average value of the baseline DiffuSeq (purple curve) over 8 valid recording points.
                     On the contrary, DiffuSeq is unstable(variance>13 in converge phase) and fluctuates greatly throughout the training process.
                     The DiffuSeq with la-attention(red curve) are lower than baseline DiffuSeq, indicating that la-attention can improve the fitting of model but is still unstable.
@@ -507,15 +535,15 @@
                 <div class="container">
                     <img src="picture/ppl01.jpg" alt="ppl01" width="30%" height="30%">
                 </div>
-                <p style="text-align:center;font-size:20px">Figure 5. PPL curve for total stage.</p>
+                <p style="text-align:center;font-size:20px">Figure 6. PPL curve for total stage. The lower the PPL index, the better.</p>
                 <div class="container">
                     <img src="picture/ppl02.jpg" alt="ppl02" width="30%" height="30%">
                 </div>
-                <p style="text-align:center;font-size:20px">Figure 6. PPL curves of all settings in the stable phase.</p>
+                <p style="text-align:center;font-size:20px">Figure 7. PPL curves of all settings in the stable phase. The lower the PPL index, the better.</p>
 
 
     <p style="font-size:20px;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) Objective evaluation for symbolic music. Figure 7-16 shows the pitch class transition matrix (PCTM), pitch classes histogram,
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(B) Objective evaluation for symbolic music. Figure 8-17 shows the pitch class transition matrix (PCTM), pitch classes histogram,
         average duration and onset interval for generated and reference instruments on test data set.
         Reference instrument means the human created music in test data set.
         The result shows that our POP-diffuseq correctly produces musical content under the requirements of instrumental prompts,
@@ -524,36 +552,36 @@
     <div class="container">
     <img src="picture/objective_eval_our_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 7. Objective evaluation for generated and reference guitar.
+    <p style="text-align:center;font-size:20px">Figure 8. Objective evaluation for generated and reference guitar.
         <br>The generated guitar are present by our model.</p>
     <br>
 
     <div class="container">
     <img src="picture/objective_eval_AMT_guitar_01.png" alt="objective_eval_01" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 8. Objective evaluation for generated and reference guitar.
+    <p style="text-align:center;font-size:20px">Figure 9. Objective evaluation for generated and reference guitar.
         <br>The generated guitar are present by AMT model.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_our_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 9. Objective evaluation for generated and reference piano.
+    <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference piano.
         <br>The generated piano are present by Our model.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_AMT_piano_02.png" alt="objective_eval_02" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 10. Objective evaluation for generated and reference piano.
+    <p style="text-align:center;font-size:20px">Figure 11. Objective evaluation for generated and reference piano.
         <br>The generated piano are present by AMT model.</p>
     <br>
 
     <p style="font-size:20px;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 7 to 10 show two groups of comparative tests.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 8 to 11 show two groups of comparative tests.
         Two models are compared, one is our model (Pop-diffuseq) and the other is the latest SOTA model AMT which is published in the Transactions on Machine Learning Research, 2024.
         They are both trained and evaluated on the LMD dataset.
         The generated and reference samples of AMT are obtained by the official Colab Notebook: https://johnthickstun.com/anticipation/
         <br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 7 and 8 are a pair of guitar tests. Figure 9 and 10 are guitar tests.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 8 and 9 are a pair of guitar tests. Figure 10 and 11 are piano tests.
         Regarding PTCM, Pop-diffuseq is competent for more complex content,
         and the images of generated PTCM are richer for AMT, indicating the richness of our model.
         Both models can learn the characteristics of the instrument because the shape of the generated PTCMs are equivalent to the references.
@@ -565,37 +593,49 @@
         <div class="container">
     <img src="picture/objective_eval_our_03.png" alt="objective_eval_03" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 11. Objective evaluation for generated and reference strings.</p>
+    <p style="text-align:center;font-size:20px">Figure 12. Objective evaluation for generated and reference strings.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_our_04.png" alt="objective_eval_04" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 12. Objective evaluation for generated and reference organ.</p>
+    <p style="text-align:center;font-size:20px">Figure 13. Objective evaluation for generated and reference organ.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_our_05.png" alt="objective_eval_05" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 13. Objective evaluation for generated and reference ensemble.</p>
+    <p style="text-align:center;font-size:20px">Figure 14. Objective evaluation for generated and reference ensemble.</p>
     <br>
     <div class="container">
     <img src="picture/objective_eval_our_06.png" alt="objective_eval_06" width="50%" height="50%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 14. Objective evaluation for generated and reference reed.</p>
+    <p style="text-align:center;font-size:20px">Figure 15. Objective evaluation for generated and reference reed.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_our_07.png" alt="objective_eval_07" width="40%" height="40%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 15. The pitch class transition matrix for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 16. The pitch class transition matrix for 3 sets of bass.</p>
     <br>
         <div class="container">
     <img src="picture/objective_eval_our_08.png" alt="objective_eval_08" width="90%" height="90%">
     </div>
-    <p style="text-align:center;font-size:20px">Figure 16. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
+    <p style="text-align:center;font-size:20px">Figure 17. The pitch classes histogram, average duration and onset interval for 3 sets of bass.</p>
     <p style="font-size:20px;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 11 to 16 present various samples of musical instruments created by our model.
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures 12 to 17 present various samples of musical instruments created by our model.
         They are randomly selected, not hand-picked, and you can reproduce them using our public code and platform.
         These images show that our model can well mimic the characteristics of human-composed musical scores, which is of great value for commercial applications.
     </p>
+
+    <h2>In the end</h2>
+                <p style="font-size:26px;">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thank you so much for reading this, and thank you for your time and patience!
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wishing you all the best in 2025!
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Happy New Year!
+
+    </p>
+
+
 			</section>
 		</article>
 	</main>
