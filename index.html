@@ -490,6 +490,19 @@
 <br>[chord, time8, chord-0-, reserve], [melody, time0, C5, dur4], [bass, time0, C4, dur4], [bass, time0, E4, dur4], [bass, time0, G4, dur4], [strings, time0, C5, dur4]]
 </p>
 
+    <h2>Supplement for Loss function</h2>
+    <div class="container">
+        <img src="picture/loss.png" alt="input embedding and output module" width="40%" height="40%">
+    </div>
+                <p style="font-size:20px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The definitions of functions and parameters are the same as those of the classic text diffusion model(Diffuseq, Difformer).
+                    The parameters x and y are common variables, they can be different things in different build tasks.
+                    In the controllable filling and accompaniment generation task, the x and y are c (condition） and m (music), respectively, in no particular order.
+
+</p>
+
+
+
     <h2>Input content embedding and output module</h2>
                 <p style="font-size:20px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     Some notable differences between our model and GPT-like textual models are the contextual (music content) embeddings and the output module.
